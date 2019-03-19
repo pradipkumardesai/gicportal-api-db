@@ -1,0 +1,10 @@
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\GicPortal.Data.dll.config
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\GicPortal.Data.dll
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\GicPortal.Data.pdb
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\EntityFramework.dll
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\EntityFramework.xml
+D:\Org Contribution\GicPortal\GicPortal.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Org Contribution\GicPortal\GicPortal.Data\obj\Debug\GicPortal.Data.dll
+D:\Org Contribution\GicPortal\GicPortal.Data\obj\Debug\GicPortal.Data.pdb
+D:\Org Contribution\GicPortal\GicPortal.Data\obj\Debug\GicPortal.Data.csprojResolveAssemblyReference.cache

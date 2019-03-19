@@ -1,0 +1,5 @@
+D:\Org Contribution\GicPortal\Gic.Infrastructure\bin\Debug\Gic.Infrastructure.dll
+D:\Org Contribution\GicPortal\Gic.Infrastructure\bin\Debug\Gic.Infrastructure.pdb
+D:\Org Contribution\GicPortal\Gic.Infrastructure\obj\Debug\Gic.Infrastructure.dll
+D:\Org Contribution\GicPortal\Gic.Infrastructure\obj\Debug\Gic.Infrastructure.pdb
+D:\Org Contribution\GicPortal\Gic.Infrastructure\obj\Debug\GicPortal.Infrastructure.csprojResolveAssemblyReference.cache

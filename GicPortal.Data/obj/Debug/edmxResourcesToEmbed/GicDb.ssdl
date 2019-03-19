@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GicDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Achievements">
+    <Key>
+      <PropertyRef Name="AchievementIntId" />
+    </Key>
+    <Property Name="AchievementGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AchievementIntId" Type="bigint" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EmployeeName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Comment" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Imagedata" Type="varbinary" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AdminPolicies">
+    <Key>
+      <PropertyRef Name="AdminPoliciesIntId" />
+    </Key>
+    <Property Name="AdminPoliciesGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AdminPoliciesIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminPoliciesName" Type="nvarchar" MaxLength="500" />
+    <Property Name="AdminPoliciesDetails" Type="varchar" MaxLength="5000" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="PoliciesFullDetails" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="Announcements">
+    <Key>
+      <PropertyRef Name="AnnouncementIntId" />
+    </Key>
+    <Property Name="AnnouncementGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AnnouncementIntId" Type="bigint" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Expiry" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommitteeEvents">
+    <Key>
+      <PropertyRef Name="EventIntId" />
+    </Key>
+    <Property Name="EventGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EventIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CommiteeIntId" Type="bigint" />
+    <Property Name="EventDescription" Type="nvarchar" MaxLength="2500" />
+  </EntityType>
+  <EntityType Name="CommitteeMembers">
+    <Key>
+      <PropertyRef Name="CommitteeMemberIntId" />
+    </Key>
+    <Property Name="CommitteeMemberGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CommitteeMemberIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommiteeIntId" Type="bigint" Nullable="false" />
+    <Property Name="MemberIntId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Committees">
+    <Key>
+      <PropertyRef Name="CommiteeIntId" />
+    </Key>
+    <Property Name="CommiteeGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CommiteeIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommiteeName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CommitteeDetails" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Holidays">
+    <Key>
+      <PropertyRef Name="HolidayId" />
+    </Key>
+    <Property Name="HolidayId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Occasion" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="HolidayDate" Type="date" Nullable="false" />
+    <Property Name="HolidayDay" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Optional" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ITPolicies">
+    <Key>
+      <PropertyRef Name="ITPoliciesIntId" />
+    </Key>
+    <Property Name="ITPoliciesGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ITPoliciesIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITPoliciesName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ITPoliciesDetails" Type="varchar" MaxLength="5000" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="PoliciesFullDetails" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="JobOpenings">
+    <Key>
+      <PropertyRef Name="JobOpeningIntId" />
+    </Key>
+    <Property Name="JobOpeningGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="JobOpeningIntId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Jobcode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Skills" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Experience" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PoliciesProcedure">
+    <Key>
+      <PropertyRef Name="PoliciesProcedureIntId" />
+    </Key>
+    <Property Name="PoliciesProcedureGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PoliciesProcedureIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PoliciesProcedureName" Type="nvarchar" MaxLength="500" />
+    <Property Name="PoliciesProcedureDetails" Type="varchar" MaxLength="5000" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="PoliciesFullDetails" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectIntId" />
+    </Key>
+    <Property Name="ProjectGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProjectIntId" Type="bigint" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Description" Type="varbinary" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamIntId" />
+    </Key>
+    <Property Name="TeamGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserIntId" />
+    </Key>
+    <Property Name="UserIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserGuid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EmployeeId" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="SupervisorIntId" Type="bigint" />
+    <Property Name="Designation" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Summary" Type="varchar" MaxLength="2500" />
+    <Property Name="DateOfBirth" Type="date" Nullable="false" />
+    <Property Name="DeskNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Extension" Type="bigint" />
+    <Property Name="Team" Type="bigint" Nullable="false" />
+    <Property Name="JoiningDate" Type="date" Nullable="false" />
+    <Property Name="About" Type="varchar" MaxLength="5000" />
+    <Property Name="Imagedata" Type="varbinary(max)" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="UserRolesIntId" />
+    </Key>
+    <Property Name="UserRolesIntId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserRoleGuid" Type="uniqueidentifier" />
+    <Property Name="UserRole" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Committee__Commi__1EA48E88">
+    <End Role="Committees" Type="Self.Committees" Multiplicity="1" />
+    <End Role="CommitteeMembers" Type="Self.CommitteeMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Committees">
+        <PropertyRef Name="CommiteeIntId" />
+      </Principal>
+      <Dependent Role="CommitteeMembers">
+        <PropertyRef Name="CommiteeIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Committee__Commi__3C69FB99">
+    <End Role="Committees" Type="Self.Committees" Multiplicity="0..1" />
+    <End Role="CommitteeEvents" Type="Self.CommitteeEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Committees">
+        <PropertyRef Name="CommiteeIntId" />
+      </Principal>
+      <Dependent Role="CommitteeEvents">
+        <PropertyRef Name="CommiteeIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Committee__Membe__1F98B2C1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="CommitteeMembers" Type="Self.CommitteeMembers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIntId" />
+      </Principal>
+      <Dependent Role="CommitteeMembers">
+        <PropertyRef Name="MemberIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__Supervisor__0C85DE4D">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="User1" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIntId" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="SupervisorIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GicDbModelStoreContainer">
+    <EntitySet Name="Achievements" EntityType="Self.Achievements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdminPolicies" EntityType="Self.AdminPolicies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Announcements" EntityType="Self.Announcements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommitteeEvents" EntityType="Self.CommitteeEvents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CommitteeMembers" EntityType="Self.CommitteeMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Committees" EntityType="Self.Committees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Holidays" EntityType="Self.Holidays" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITPolicies" EntityType="Self.ITPolicies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobOpenings" EntityType="Self.JobOpenings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PoliciesProcedure" EntityType="Self.PoliciesProcedure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Committee__Commi__1EA48E88" Association="Self.FK__Committee__Commi__1EA48E88">
+      <End Role="Committees" EntitySet="Committees" />
+      <End Role="CommitteeMembers" EntitySet="CommitteeMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Committee__Commi__3C69FB99" Association="Self.FK__Committee__Commi__3C69FB99">
+      <End Role="Committees" EntitySet="Committees" />
+      <End Role="CommitteeEvents" EntitySet="CommitteeEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Committee__Membe__1F98B2C1" Association="Self.FK__Committee__Membe__1F98B2C1">
+      <End Role="User" EntitySet="User" />
+      <End Role="CommitteeMembers" EntitySet="CommitteeMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__Supervisor__0C85DE4D" Association="Self.FK__User__Supervisor__0C85DE4D">
+      <End Role="User" EntitySet="User" />
+      <End Role="User1" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

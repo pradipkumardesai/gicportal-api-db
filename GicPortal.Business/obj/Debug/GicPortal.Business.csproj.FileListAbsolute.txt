@@ -1,0 +1,12 @@
+D:\Org Contribution\GicPortal\GicPortal.Business\obj\Debug\GicPortal.Business.csprojResolveAssemblyReference.cache
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\GicPortal.Business.dll
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\GicPortal.Business.pdb
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\Gic.Infrastructure.dll
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\GicPortal.Data.dll
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\EntityFramework.dll
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\Gic.Infrastructure.pdb
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\GicPortal.Data.pdb
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\GicPortal.Data.dll.config
+D:\Org Contribution\GicPortal\GicPortal.Business\bin\Debug\EntityFramework.xml
+D:\Org Contribution\GicPortal\GicPortal.Business\obj\Debug\GicPortal.Business.dll
+D:\Org Contribution\GicPortal\GicPortal.Business\obj\Debug\GicPortal.Business.pdb

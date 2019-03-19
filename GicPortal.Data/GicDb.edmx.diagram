@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f9fc2f873b674a4297344a7fec2d1c74" Name="Diagram1">
+        <EntityTypeShape EntityType="GicDbModel.Achievement" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.Announcement" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.CommitteeEvent" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.CommitteeMember" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.Committee" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.Holiday" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.JobOpening" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.PoliciesProcedure" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.Project" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.Team" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.User" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GicDbModel.UserRole" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="GicDbModel.FK__Committee__Commi__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="GicDbModel.FK__Committee__Commi__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="GicDbModel.FK__Committee__Membe__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="GicDbModel.FK__User__Supervisor__02FC7413" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GicDbModel.AdminPolicy" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="GicDbModel.ITPolicy" Width="1.5" PointX="7.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

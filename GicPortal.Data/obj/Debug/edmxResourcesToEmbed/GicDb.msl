@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GicDbModelStoreContainer" CdmEntityContainer="GicDbEntities">
+    <EntitySetMapping Name="Achievements">
+      <EntityTypeMapping TypeName="GicDbModel.Achievement">
+        <MappingFragment StoreEntitySet="Achievements">
+          <ScalarProperty Name="AchievementGuid" ColumnName="AchievementGuid" />
+          <ScalarProperty Name="AchievementIntId" ColumnName="AchievementIntId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Imagedata" ColumnName="Imagedata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Announcements">
+      <EntityTypeMapping TypeName="GicDbModel.Announcement">
+        <MappingFragment StoreEntitySet="Announcements">
+          <ScalarProperty Name="AnnouncementGuid" ColumnName="AnnouncementGuid" />
+          <ScalarProperty Name="AnnouncementIntId" ColumnName="AnnouncementIntId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Expiry" ColumnName="Expiry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommitteeEvents">
+      <EntityTypeMapping TypeName="GicDbModel.CommitteeEvent">
+        <MappingFragment StoreEntitySet="CommitteeEvents">
+          <ScalarProperty Name="EventGuid" ColumnName="EventGuid" />
+          <ScalarProperty Name="EventIntId" ColumnName="EventIntId" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="CommiteeIntId" ColumnName="CommiteeIntId" />
+          <ScalarProperty Name="EventDescription" ColumnName="EventDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommitteeMembers">
+      <EntityTypeMapping TypeName="GicDbModel.CommitteeMember">
+        <MappingFragment StoreEntitySet="CommitteeMembers">
+          <ScalarProperty Name="CommitteeMemberIntId" ColumnName="CommitteeMemberIntId" />
+          <ScalarProperty Name="CommitteeMemberGuid" ColumnName="CommitteeMemberGuid" />
+          <ScalarProperty Name="CommiteeIntId" ColumnName="CommiteeIntId" />
+          <ScalarProperty Name="MemberIntId" ColumnName="MemberIntId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Committees">
+      <EntityTypeMapping TypeName="GicDbModel.Committee">
+        <MappingFragment StoreEntitySet="Committees">
+          <ScalarProperty Name="CommiteeGuid" ColumnName="CommiteeGuid" />
+          <ScalarProperty Name="CommiteeIntId" ColumnName="CommiteeIntId" />
+          <ScalarProperty Name="CommiteeName" ColumnName="CommiteeName" />
+          <ScalarProperty Name="CommitteeDetails" ColumnName="CommitteeDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Holidays">
+      <EntityTypeMapping TypeName="GicDbModel.Holiday">
+        <MappingFragment StoreEntitySet="Holidays">
+          <ScalarProperty Name="HolidayId" ColumnName="HolidayId" />
+          <ScalarProperty Name="Occasion" ColumnName="Occasion" />
+          <ScalarProperty Name="HolidayDate" ColumnName="HolidayDate" />
+          <ScalarProperty Name="HolidayDay" ColumnName="HolidayDay" />
+          <ScalarProperty Name="Optional" ColumnName="Optional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobOpenings">
+      <EntityTypeMapping TypeName="GicDbModel.JobOpening">
+        <MappingFragment StoreEntitySet="JobOpenings">
+          <ScalarProperty Name="JobOpeningIntId" ColumnName="JobOpeningIntId" />
+          <ScalarProperty Name="JobOpeningGuid" ColumnName="JobOpeningGuid" />
+          <ScalarProperty Name="Jobcode" ColumnName="Jobcode" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Skills" ColumnName="Skills" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PoliciesProcedures">
+      <EntityTypeMapping TypeName="GicDbModel.PoliciesProcedure">
+        <MappingFragment StoreEntitySet="PoliciesProcedure">
+          <ScalarProperty Name="PoliciesFullDetails" ColumnName="PoliciesFullDetails" />
+          <ScalarProperty Name="PoliciesProcedureGuid" ColumnName="PoliciesProcedureGuid" />
+          <ScalarProperty Name="PoliciesProcedureIntId" ColumnName="PoliciesProcedureIntId" />
+          <ScalarProperty Name="PoliciesProcedureName" ColumnName="PoliciesProcedureName" />
+          <ScalarProperty Name="PoliciesProcedureDetails" ColumnName="PoliciesProcedureDetails" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="GicDbModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="ProjectGuid" ColumnName="ProjectGuid" />
+          <ScalarProperty Name="ProjectIntId" ColumnName="ProjectIntId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="GicDbModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="TeamGuid" ColumnName="TeamGuid" />
+          <ScalarProperty Name="TeamIntId" ColumnName="TeamIntId" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="GicDbModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="UserIntId" ColumnName="UserIntId" />
+          <ScalarProperty Name="UserGuid" ColumnName="UserGuid" />
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="SupervisorIntId" ColumnName="SupervisorIntId" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="DeskNo" ColumnName="DeskNo" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="About" ColumnName="About" />
+          <ScalarProperty Name="Imagedata" ColumnName="Imagedata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="GicDbModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="UserRolesIntId" ColumnName="UserRolesIntId" />
+          <ScalarProperty Name="UserRoleGuid" ColumnName="UserRoleGuid" />
+          <ScalarProperty Name="UserRole1" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdminPolicies">
+      <EntityTypeMapping TypeName="GicDbModel.AdminPolicy">
+        <MappingFragment StoreEntitySet="AdminPolicies">
+          <ScalarProperty Name="PoliciesFullDetails" ColumnName="PoliciesFullDetails" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="AdminPoliciesDetails" ColumnName="AdminPoliciesDetails" />
+          <ScalarProperty Name="AdminPoliciesName" ColumnName="AdminPoliciesName" />
+          <ScalarProperty Name="AdminPoliciesIntId" ColumnName="AdminPoliciesIntId" />
+          <ScalarProperty Name="AdminPoliciesGuid" ColumnName="AdminPoliciesGuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITPolicies">
+      <EntityTypeMapping TypeName="GicDbModel.ITPolicy">
+        <MappingFragment StoreEntitySet="ITPolicies">
+          <ScalarProperty Name="PoliciesFullDetails" ColumnName="PoliciesFullDetails" />
+          <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+          <ScalarProperty Name="ITPoliciesDetails" ColumnName="ITPoliciesDetails" />
+          <ScalarProperty Name="ITPoliciesName" ColumnName="ITPoliciesName" />
+          <ScalarProperty Name="ITPoliciesIntId" ColumnName="ITPoliciesIntId" />
+          <ScalarProperty Name="ITPoliciesGuid" ColumnName="ITPoliciesGuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

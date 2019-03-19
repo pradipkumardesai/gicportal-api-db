@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GicDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Achievement">
+    <Key>
+      <PropertyRef Name="AchievementIntId" />
+    </Key>
+    <Property Name="AchievementGuid" Type="Guid" Nullable="false" />
+    <Property Name="AchievementIntId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Imagedata" Type="Binary" MaxLength="100" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Announcement">
+    <Key>
+      <PropertyRef Name="AnnouncementIntId" />
+    </Key>
+    <Property Name="AnnouncementGuid" Type="Guid" Nullable="false" />
+    <Property Name="AnnouncementIntId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Expiry" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="CommitteeEvent">
+    <Key>
+      <PropertyRef Name="EventIntId" />
+    </Key>
+    <Property Name="EventGuid" Type="Guid" Nullable="false" />
+    <Property Name="EventIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EventName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CommiteeIntId" Type="Int64" />
+    <Property Name="EventDescription" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Committee" Relationship="Self.FK__Committee__Commi__3C69FB99" FromRole="CommitteeEvents" ToRole="Committees" />
+  </EntityType>
+  <EntityType Name="CommitteeMember">
+    <Key>
+      <PropertyRef Name="CommitteeMemberIntId" />
+    </Key>
+    <Property Name="CommitteeMemberGuid" Type="Guid" Nullable="false" />
+    <Property Name="CommiteeIntId" Type="Int64" Nullable="false" />
+    <Property Name="MemberIntId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Committee" Relationship="Self.FK__Committee__Commi__05D8E0BE" FromRole="CommitteeMembers" ToRole="Committees" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Committee__Membe__06CD04F7" FromRole="CommitteeMembers" ToRole="User" />
+    <Property Name="CommitteeMemberIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Committee">
+    <Key>
+      <PropertyRef Name="CommiteeIntId" />
+    </Key>
+    <Property Name="CommiteeGuid" Type="Guid" Nullable="false" />
+    <Property Name="CommiteeIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommiteeName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CommitteeDetails" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CommitteeEvents" Relationship="Self.FK__Committee__Commi__3C69FB99" FromRole="Committees" ToRole="CommitteeEvents" />
+    <NavigationProperty Name="CommitteeMembers" Relationship="Self.FK__Committee__Commi__05D8E0BE" FromRole="Committees" ToRole="CommitteeMembers" />
+  </EntityType>
+  <EntityType Name="Holiday">
+    <Key>
+      <PropertyRef Name="HolidayId" />
+    </Key>
+    <Property Name="HolidayId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Occasion" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HolidayDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="HolidayDay" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Optional" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobOpening">
+    <Key>
+      <PropertyRef Name="JobOpeningIntId" />
+    </Key>
+    <Property Name="Jobcode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Skills" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Experience" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobOpeningGuid" Type="Guid" Nullable="false" />
+    <Property Name="JobOpeningIntId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="PoliciesProcedure">
+    <Key>
+      <PropertyRef Name="PoliciesProcedureIntId" />
+    </Key>
+    <Property Name="PoliciesProcedureGuid" Type="Guid" Nullable="false" />
+    <Property Name="PoliciesProcedureIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PoliciesProcedureName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PoliciesProcedureDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="PoliciesFullDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectIntId" />
+    </Key>
+    <Property Name="ProjectGuid" Type="Guid" Nullable="false" />
+    <Property Name="ProjectIntId" Type="Int64" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="Binary" MaxLength="100" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamIntId" />
+    </Key>
+    <Property Name="TeamGuid" Type="Guid" Nullable="false" />
+    <Property Name="TeamIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeamName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserIntId" />
+    </Key>
+    <Property Name="UserIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserGuid" Type="Guid" Nullable="false" />
+    <Property Name="EmployeeId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailId" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupervisorIntId" Type="Int64" />
+    <Property Name="Designation" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Summary" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DeskNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Extension" Type="Int64" />
+    <Property Name="Team" Type="Int64" Nullable="false" />
+    <Property Name="JoiningDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="About" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="Imagedata" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="CommitteeMembers" Relationship="Self.FK__Committee__Membe__06CD04F7" FromRole="User" ToRole="CommitteeMembers" />
+    <NavigationProperty Name="User1" Relationship="Self.FK__User__Supervisor__02FC7413" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User2" Relationship="Self.FK__User__Supervisor__02FC7413" FromRole="User1" ToRole="User" />
+    <Property Name="ContactNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRolesIntId" />
+    </Key>
+    <Property Name="UserRolesIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserRoleGuid" Type="Guid" />
+    <Property Name="UserRole1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Committee__Commi__3C69FB99">
+    <End Role="Committees" Type="Self.Committee" Multiplicity="0..1" />
+    <End Role="CommitteeEvents" Type="Self.CommitteeEvent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Committees">
+        <PropertyRef Name="CommiteeIntId" />
+      </Principal>
+      <Dependent Role="CommitteeEvents">
+        <PropertyRef Name="CommiteeIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Committee__Commi__05D8E0BE">
+    <End Role="Committees" Type="Self.Committee" Multiplicity="1" />
+    <End Role="CommitteeMembers" Type="Self.CommitteeMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Committees">
+        <PropertyRef Name="CommiteeIntId" />
+      </Principal>
+      <Dependent Role="CommitteeMembers">
+        <PropertyRef Name="CommiteeIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Committee__Membe__06CD04F7">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="CommitteeMembers" Type="Self.CommitteeMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIntId" />
+      </Principal>
+      <Dependent Role="CommitteeMembers">
+        <PropertyRef Name="MemberIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__Supervisor__02FC7413">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="User1" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserIntId" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="SupervisorIntId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GicDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Achievements" EntityType="Self.Achievement" />
+    <EntitySet Name="Announcements" EntityType="Self.Announcement" />
+    <EntitySet Name="CommitteeEvents" EntityType="Self.CommitteeEvent" />
+    <EntitySet Name="CommitteeMembers" EntityType="Self.CommitteeMember" />
+    <EntitySet Name="Committees" EntityType="Self.Committee" />
+    <EntitySet Name="Holidays" EntityType="Self.Holiday" />
+    <EntitySet Name="JobOpenings" EntityType="Self.JobOpening" />
+    <EntitySet Name="PoliciesProcedures" EntityType="Self.PoliciesProcedure" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Teams" EntityType="Self.Team" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <AssociationSet Name="FK__Committee__Commi__3C69FB99" Association="Self.FK__Committee__Commi__3C69FB99">
+      <End Role="Committees" EntitySet="Committees" />
+      <End Role="CommitteeEvents" EntitySet="CommitteeEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Committee__Commi__05D8E0BE" Association="Self.FK__Committee__Commi__05D8E0BE">
+      <End Role="Committees" EntitySet="Committees" />
+      <End Role="CommitteeMembers" EntitySet="CommitteeMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Committee__Membe__06CD04F7" Association="Self.FK__Committee__Membe__06CD04F7">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CommitteeMembers" EntitySet="CommitteeMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__Supervisor__02FC7413" Association="Self.FK__User__Supervisor__02FC7413">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="AdminPolicies" EntityType="GicDbModel.AdminPolicy" />
+    <EntitySet Name="ITPolicies" EntityType="GicDbModel.ITPolicy" />
+  </EntityContainer>
+  <EntityType Name="AdminPolicy">
+    <Key>
+      <PropertyRef Name="AdminPoliciesIntId" />
+    </Key>
+    <Property Name="AdminPoliciesGuid" Type="Guid" Nullable="false" />
+    <Property Name="AdminPoliciesIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminPoliciesName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AdminPoliciesDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="PoliciesFullDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ITPolicy">
+    <Key>
+      <PropertyRef Name="ITPoliciesIntId" />
+    </Key>
+    <Property Name="ITPoliciesGuid" Type="Guid" Nullable="false" />
+    <Property Name="ITPoliciesIntId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITPoliciesName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ITPoliciesDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="PoliciesFullDetails" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
